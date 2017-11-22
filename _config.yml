@@ -1,0 +1,13 @@
+title: Tailwind Jekyll Starter Kit (Inline Style Version)
+description: A starter kit for using Tailwind with Jekyll (inline style version)
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - src
+  - tailwind.js
