@@ -1,4 +1,4 @@
-# Tailwind Jekyll Starter Kit
+# Tailwind Jekyll Starter Kit (Inline Style Version)
 A starter kit for using [Tailwind](https://tailwindcss.com) (v0.2.2) with [Jekyll](https://jekyllrb.com/) that includes:
 * A barebones Jekyll starter theme
 * A Gulp file with a default task that does the following:
@@ -6,6 +6,7 @@ A starter kit for using [Tailwind](https://tailwindcss.com) (v0.2.2) with [Jekyl
     * Builds Tailwind
     * Runs [Autoprefixer](https://github.com/postcss/autoprefixer)
     * Minifies your CSS
+    * Inlines CSS in head
     * Builds Jekyll
     * Runs [Browsersync](https://www.browsersync.io/) for live reload
 
