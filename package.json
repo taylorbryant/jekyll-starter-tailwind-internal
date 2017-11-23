@@ -1,7 +1,7 @@
 {
-  "name": "tailwind-jekyll-inline",
+  "name": "tailwind-jekyll-internal",
   "version": "1.0.0",
-  "description": "A starter kit for using Tailwind with Jekyll (inline style version)",
+  "description": "A starter kit for using Tailwind with Jekyll (internal style version)",
   "main": "gulpfile.js",
   "devDependencies": {
     "browser-sync": "^2.18.13",
