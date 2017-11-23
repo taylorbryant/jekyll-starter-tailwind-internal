@@ -1,5 +1,5 @@
-title: Tailwind Jekyll Starter Kit (Internal Style Version)
-description: A starter kit for using Tailwind with Jekyll (internal style version)
+title: Tailwind Jekyll Starter Kit (Internal CSS Version)
+description: A starter kit for using Tailwind with Jekyll (internal CSS version)
 
 exclude:
   - Gemfile
