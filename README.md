@@ -6,7 +6,7 @@ A starter kit for using [Tailwind](https://tailwindcss.com) (v0.2.2) with [Jekyl
     * Builds Tailwind
     * Runs [Autoprefixer](https://github.com/postcss/autoprefixer)
     * Minifies your CSS
-    * Injects CSS in <head>
+    * Injects CSS in `<head>`
     * Builds Jekyll
     * Runs [Browsersync](https://www.browsersync.io/) for live reload
 
