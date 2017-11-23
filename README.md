@@ -1,4 +1,4 @@
-# Tailwind Jekyll Starter (Internal Style Version)
+# Tailwind Jekyll Starter (Internal CSS)
 A starter kit for using [Tailwind](https://tailwindcss.com) (v0.2.2) with [Jekyll](https://jekyllrb.com/) that includes:
 * A barebones Jekyll starter theme
 * A Gulp file with a default task that does the following:
@@ -6,7 +6,7 @@ A starter kit for using [Tailwind](https://tailwindcss.com) (v0.2.2) with [Jekyl
     * Builds Tailwind
     * Runs [Autoprefixer](https://github.com/postcss/autoprefixer)
     * Minifies your CSS
-    * Injects CSS in `<head>`
+    * Places CSS in `<head>`
     * Builds Jekyll
     * Runs [Browsersync](https://www.browsersync.io/) for live reload
 
@@ -31,4 +31,4 @@ A starter kit for using [Tailwind](https://tailwindcss.com) (v0.2.2) with [Jekyl
 * `npm install` to install npm packages
 * `gulp` to run the default Gulp task
 
-Don't want to use internal styles? Check out the [regular version](https://github.com/taylorbryant/tailwind-jekyll) of this starter kit.
+Don't want to use internal CSS? Check out the [regular version](https://github.com/taylorbryant/tailwind-jekyll) of this starter kit.
