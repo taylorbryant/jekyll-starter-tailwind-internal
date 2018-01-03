@@ -32,3 +32,6 @@ A starter kit for using [Tailwind](https://tailwindcss.com) (v0.4.0) with [Jekyl
 * `gulp` to run the default Gulp task
 
 Don't want to use internal CSS? Check out the [regular version](https://github.com/taylorbryant/tailwind-jekyll) of this starter kit.
+
+## License
+[MIT](https://github.com/taylorbryant/tailwind-jekyll-internal/blob/master/LICENSE.md)
