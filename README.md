@@ -6,7 +6,7 @@ A starter kit for using [Tailwind](https://tailwindcss.com) (v0.4.1) with [Jekyl
     * Builds Tailwind
     * Runs [Autoprefixer](https://github.com/postcss/autoprefixer)
     * Minifies your CSS
-    * Places CSS in `<head>`
+    * Places CSS directly in `<head>`
     * Builds Jekyll
     * Runs [Browsersync](https://www.browsersync.io/) for live reload
 
@@ -31,7 +31,7 @@ A starter kit for using [Tailwind](https://tailwindcss.com) (v0.4.1) with [Jekyl
 * `npm install` to install npm packages
 * `gulp` to run the default Gulp task
 
-Don't want to use internal CSS? Check out the [regular version](https://github.com/taylorbryant/tailwind-jekyll) of this starter kit.
+Don't want to use internal CSS? Check out the [_regular_ version](https://github.com/taylorbryant/tailwind-jekyll) of this starter kit.
 
 ## License
 [MIT](https://github.com/taylorbryant/tailwind-jekyll-internal/blob/master/LICENSE.md)
