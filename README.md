@@ -4,6 +4,7 @@ A starter kit for using [Tailwind](https://tailwindcss.com) (v0.4.1) with [Jekyl
 * A Gulp file with a default task that does the following:
 
     * Builds Tailwind
+    * Strips out unused CSS using Purgecss
     * Runs [Autoprefixer](https://github.com/postcss/autoprefixer)
     * Minifies your CSS
     * Places CSS directly in `<head>`
