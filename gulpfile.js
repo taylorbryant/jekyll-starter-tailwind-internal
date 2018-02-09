@@ -79,7 +79,7 @@ gulp.task("purge", ["jekyll-build"], function() {
  */
 gulp.task("serve", ["purge"], () => {
   browserSync.init({
-    port: 4100,
+    port: 4000,
     open: "local",
     server: {
       baseDir: siteRoot + "/"
@@ -97,7 +97,7 @@ gulp.task("serve", ["purge"], () => {
       "!_site/**/*",
       "!node_modules"
     ],
-    { interval: 2000 },
+    { interval: 1000 },
     ["purge"]
   );
 });
