@@ -1,60 +1,105 @@
-
-const gulp = require('gulp');
-const gutil = require('gulp-util');
-const child = require('child_process');
-const browserSync = require('browser-sync').create();
-
-const siteRoot = '_site';
-const mainCSS = 'src/style.css'; /* Main stylesheet (pre-build) */
-const tailwindConfig = 'tailwind.js'; /* Tailwind config */
-
-const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll'; /* Fix Windows compatibility issue */
+const gulp = require("gulp");
+const gutil = require("gulp-util");
+const child = require("child_process");
+const browserSync = require("browser-sync").create();
+const siteRoot = "_site";
+const mainCSS = "src/style.css"; /* Main stylesheet (pre-build) */
+const tailwindConfig = "tailwind.js"; /* Tailwind config */
 
 /**
- * Build Jekyll Site
+ * Compile CSS
  */
-gulp.task('jekyll-build', ['css'], function () {
-  browserSync.notify('Running: $ jekyll build');
-  return child.spawn(jekyll, ['build'], { stdio: 'inherit' });
+gulp.task("css", function() {
+  const atimport = require("postcss-import");
+  const postcss = require("gulp-postcss");
+  const tailwindcss = require("tailwindcss");
+  const autoprefixer = require("gulp-autoprefixer");
+  const cleancss = require("gulp-clean-css");
+
+  browserSync.notify("Compiling CSS...");
+
+  return gulp
+    .src(mainCSS)
+    .pipe(postcss([atimport(), tailwindcss(tailwindConfig)]))
+    .pipe(autoprefixer({ browsers: ["last 2 versions"], cascade: false }))
+    .pipe(cleancss())
+    .pipe(gulp.dest("_includes/"));
 });
 
 /**
- * Compile styles
+ * Fix Windows compatibility issue
  */
-gulp.task('css', function () {
-  const atimport = require('postcss-import');
-  const postcss = require('gulp-postcss');
-  const tailwindcss = require('tailwindcss');
-  const autoprefixer = require('gulp-autoprefixer');
-  const cleancss = require('gulp-clean-css');
+const jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
 
-  return gulp.src(mainCSS)
-    .pipe(postcss([
-      atimport(),
-      tailwindcss(tailwindConfig)
-    ]))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
-    .pipe(cleancss())
-    .pipe(gulp.dest('_includes/'))
+/**
+ * Build Jekyll site
+ */
+gulp.task("jekyll-build", ["css"], function() {
+  browserSync.notify("Building Jekyll site...");
+
+  return child.spawn(jekyll, ["build"], { stdio: "inherit" });
+});
+
+/**
+ * Custom PurgeCSS Extractor
+ * https://github.com/FullHuman/purgecss
+ */
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-z0-9-:\/]+/g);
+  }
+}
+
+/**
+ * Run PurgeCSS
+ */
+gulp.task("purge", ["jekyll-build"], function() {
+  const purgecss = require("gulp-purgecss");
+
+  browserSync.notify("Purging CSS...");
+
+  return gulp
+    .src("_includes/style.css")
+    .pipe(
+      purgecss({
+        content: ["_site/**/*.html"],
+        extractors: [
+          {
+            extractor: TailwindExtractor,
+            extensions: ["html", "js"]
+          }
+        ]
+      })
+    )
+    .pipe(gulp.dest("_includes/"))
 });
 
 /**
  * Serve site with BrowserSync
  */
-gulp.task('serve', ['jekyll-build'], () => {
+gulp.task("serve", ["purge"], () => {
   browserSync.init({
-    files: [siteRoot + '/**'],
-    port: 4000,
+    port: 4100,
     open: "local",
     server: {
-      baseDir: siteRoot
-    }
+      baseDir: siteRoot + "/"
+    },
+    files: [siteRoot + "/**"]
   });
 
-  gulp.watch([mainCSS, tailwindConfig, '**/*.html', '**/*.md', '**/*.yml', '!_site/**/*'], { interval: 500 }, ['jekyll-build']);
+  gulp.watch(
+    [
+      mainCSS,
+      tailwindConfig,
+      "**/*.html",
+      "**/*.md",
+      "**/*.yml",
+      "!_site/**/*",
+      "!node_modules"
+    ],
+    { interval: 2000 },
+    ["purge"]
+  );
 });
 
-gulp.task('default', ['serve']);
+gulp.task("default", ["serve"]);
