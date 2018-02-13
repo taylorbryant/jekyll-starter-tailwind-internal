@@ -2,27 +2,23 @@ const gulp = require("gulp");
 const gutil = require("gulp-util");
 const child = require("child_process");
 const browserSync = require("browser-sync").create();
-
 const siteRoot = "_site";
 const mainCSS = "src/style.css"; /* Main stylesheet (pre-build) */
 const tailwindConfig = "tailwind.js"; /* Tailwind config */
 
-const jekyll =
-  process.platform === "win32"
-    ? "jekyll.bat"
-    : "jekyll"; /* Fix Windows compatibility issue */
+/**
+ * Fix Windows compatibility issue
+ */
+const jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
 
 /**
- * Build Jekyll Site
+ * Build Jekyll site
  */
 gulp.task("jekyll-build", ["css"], function() {
-  browserSync.notify("Running: $ jekyll build");
+  browserSync.notify("Building Jekyll site...");
   return child.spawn(jekyll, ["build"], { stdio: "inherit" });
 });
 
-/**
- * Compile styles
- */
 gulp.task("css", function() {
   const atimport = require("postcss-import");
   const postcss = require("gulp-postcss");
@@ -44,13 +40,13 @@ gulp.task("css", function() {
 });
 
 /**
- * Serve site with BrowserSync
+ * Serve site with Browsersync
  */
 gulp.task("serve", ["jekyll-build"], () => {
   browserSync.init({
     files: [siteRoot + "/**"],
-    port: 4000,
     open: "local",
+    port: 4000,
     server: {
       baseDir: siteRoot
     }
@@ -63,7 +59,8 @@ gulp.task("serve", ["jekyll-build"], () => {
       "**/*.html",
       "**/*.md",
       "**/*.yml",
-      "!_site/**/*"
+      "!_site/**/*",
+      "!node_modules"
     ],
     { interval: 500 },
     ["jekyll-build"]
