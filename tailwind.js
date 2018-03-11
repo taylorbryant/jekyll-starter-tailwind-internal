@@ -194,8 +194,9 @@ module.exports = {
 
   fonts: {
     'sans': [
-      '-apple-system',
+      'system-ui',
       'BlinkMacSystemFont',
+      '-apple-system',
       'Segoe UI',
       'Roboto',
       'Oxygen',
@@ -398,7 +399,7 @@ module.exports = {
   |
   */
 
-  borderColors: Object.assign({ default: colors['grey-light'] }, colors),
+  borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
 
 
   /*
@@ -803,7 +804,7 @@ module.exports = {
   | Here is where you control which modules are generated and what variants are
   | generated for each of those modules.
   |
-  | Currently supported variants: 'responsive', 'hover', 'focus'
+  | Currently supported variants: 'responsive', 'hover', 'focus', 'group-hover'
   |
   | To disable a module completely, use `false` instead of an array.
   |
@@ -856,6 +857,22 @@ module.exports = {
     width: ['responsive'],
     zIndex: ['responsive'],
   },
+
+
+  /*
+  |-----------------------------------------------------------------------------
+  | Plugins                                https://tailwindcss.com/docs/plugins
+  |-----------------------------------------------------------------------------
+  |
+  | Here is where you can register any additional plugins you'd like to use in
+  | your project.
+  |
+  | Be sure to view the complete plugin documentation to learn more about how
+  | the plugin system works.
+  |
+  */
+
+  plugins: [],
 
 
   /*
