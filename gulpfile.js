@@ -1,9 +1,9 @@
+const browserSync = require("browser-sync").create();
+const child = require("child_process");
 const gulp = require("gulp");
 const gutil = require("gulp-util");
-const child = require("child_process");
-const browserSync = require("browser-sync").create();
-const siteRoot = "_site";
 const mainCSS = "src/style.css"; /* Main stylesheet (pre-build) */
+const siteRoot = "_site";
 const tailwindConfig = "tailwind.js"; /* Tailwind config */
 
 /**
