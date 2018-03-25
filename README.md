@@ -26,10 +26,13 @@ A starter kit for using [Tailwind](https://tailwindcss.com) (v0.4.2) with [Jekyl
 * [npm](https://www.npmjs.com/)
 * [Ruby](https://www.ruby-lang.org/en/)
 
-## Get started
+## Getting started
 * `bundle install` to install Ruby gems
 * `npm install` to install npm packages
 * `gulp` to run the default Gulp task
+
+## Deploy
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/taylorbryant/tailwind-jekyll-internal)
 
 Don't want to use internal CSS? Check out the [_regular_ version](https://github.com/taylorbryant/tailwind-jekyll) of this starter kit.
 
