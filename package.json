@@ -4,14 +4,14 @@
   "description": "A starter kit for using Tailwind with Jekyll (internal CSS version)",
   "main": "gulpfile.js",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.7",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.9.0",
     "gulp-postcss": "^7.0.0",
     "gulp-util": "^3.0.8",
     "postcss-import": "^11.1.0",
-    "tailwindcss": "^0.5.1"
+    "tailwindcss": "^0.5.2"
   },
   "author": "Taylor Bryant",
   "license": "ISC"
