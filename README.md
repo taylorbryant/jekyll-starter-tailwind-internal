@@ -38,3 +38,9 @@ Don't want to use internal CSS? Check out the [_regular_ version](https://github
 
 ## License
 [MIT](https://github.com/taylorbryant/tailwind-jekyll-internal/blob/master/LICENSE.md)
+
+## How you can help
+Enjoying Tailwind Jekyll Internal and want to help? You can:
+* [Create an issue](https://github.com/taylorbryant/tailwind-jekyll-internal/issues/new) with some constructive criticism
+* [Submit a pull request](https://github.com/taylorbryant/tailwind-jekyll-internal/compare) with some improvements to the project
+* [Buy me a :coffee:](https://cash.me/$TaylorBryant)
