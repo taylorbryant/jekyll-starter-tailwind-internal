@@ -2,16 +2,24 @@
   "name": "tailwind-jekyll-internal",
   "version": "1.1.0",
   "description": "A starter kit for using Tailwind with Jekyll (internal CSS version)",
-  "main": "gulpfile.js",
+  "main": "gulpfile.babel.js",
   "devDependencies": {
-    "browser-sync": "^2.23.7",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-postcss": "^7.0.0",
-    "gulp-util": "^3.0.8",
-    "postcss-import": "^11.1.0",
-    "tailwindcss": "^0.5.3"
+    "autoprefixer": "^9.4.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.8",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-purgecss": "^1.1.1",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^0.7.4"
+  },
+  "scripts": {
+    "build": "gulp",
+    "build:dev": "gulp",
+    "start": "gulp serve"
   },
   "author": "Taylor Bryant",
   "license": "ISC"
