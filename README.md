@@ -36,9 +36,10 @@ Don't want to use internal CSS? Check out the [_regular_ version](https://github
 ## Build your site
 * `npm run build` to compile the site for production
 
-
 ## Deploy
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/taylorbryant/tailwind-jekyll-internal)
+
+Note: By default, Netlify uses `jekyll build` as the build command. Make sure to change this to `npm run build`.
 
 ## License
 [MIT](https://github.com/taylorbryant/tailwind-jekyll/blob/master/LICENSE.md)
