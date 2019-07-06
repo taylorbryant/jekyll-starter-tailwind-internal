@@ -1,10 +1,10 @@
 {
   "name": "tailwind-jekyll-internal",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "A starter kit for using Tailwind with Jekyll (internal CSS version)",
   "main": "gulpfile.babel.js",
   "devDependencies": {
-    "autoprefixer": "9.6.0",
+    "autoprefixer": "9.6.1",
     "babel-preset-env": "1.7.0",
     "babel-register": "6.26.0",
     "browser-sync": "2.26.7",
