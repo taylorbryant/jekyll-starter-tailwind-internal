@@ -64,10 +64,10 @@ task("startServer", () => {
 
   watch(
     [
-      "*/**.css",
-      "*/**.html",
-      "*/**.md",
-      "*/**.markdown",
+      "**/*.css",
+      "**/*.html",
+      "**/*.md",
+      "**/*.markdown",
       "!_site/**/*",
       "!node_modules/**/*",
       "!_includes/style.css"
