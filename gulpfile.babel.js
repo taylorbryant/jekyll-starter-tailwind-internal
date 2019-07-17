@@ -39,7 +39,7 @@ task("processStyles", done => {
     .pipe(postcss([atimport(), tailwindcss(tailwindConfig)]))
     .pipe(
       new purgecss({
-        content: ["_includes/**/*.html", "_layouts/**/*.html"],
+        content: ["**/*.html"],
         extractors: [
           {
             extractor: TailwindExtractor,
@@ -64,18 +64,16 @@ task("startServer", () => {
 
   watch(
     [
-      rawStylesheet,
-      "**/*.css",
-      "**/*.gif",
-      "**/*.html",
-      "**/*.jpg",
-      "**/*.jpeg",
-      "**/*.js",
-      "**/*.md",
-      "**/*.png",
-      "**/*.yml",
       "!_site/**/*",
-      "!node_modules"
+      "!node_modules/**/*",
+      "!_includes/style.css",
+      rawStylesheet,
+      tailwindConfig,
+      "_includes/*.html",
+      "_layouts/*.html",
+      "*.html",
+      "*.md",
+      "*.markdown"
     ],
     { interval: 500 },
     buildSite
