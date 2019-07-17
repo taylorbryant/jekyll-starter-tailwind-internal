@@ -64,16 +64,13 @@ task("startServer", () => {
 
   watch(
     [
+      "*/**.css",
+      "*/**.html",
+      "*/**.md",
+      "*/**.markdown",
       "!_site/**/*",
       "!node_modules/**/*",
-      "!_includes/style.css",
-      rawStylesheet,
-      tailwindConfig,
-      "_includes/*.html",
-      "_layouts/*.html",
-      "*.html",
-      "*.md",
-      "*.markdown"
+      "!_includes/style.css"
     ],
     { interval: 500 },
     buildSite
