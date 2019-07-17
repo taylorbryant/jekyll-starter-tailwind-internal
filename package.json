@@ -1,6 +1,6 @@
 {
   "name": "tailwind-jekyll-internal",
-  "version": "1.1.8",
+  "version": "2.0.0",
   "description": "A starter kit for using Tailwind with Jekyll (internal CSS version)",
   "main": "gulpfile.babel.js",
   "devDependencies": {
@@ -21,6 +21,13 @@
     "build:dev": "gulp",
     "start": "gulp serve"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oddstronaut/tailwind-jekyll-internal.git"
+  },
   "author": "Taylor Bryant",
-  "license": "ISC"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oddstronaut/tailwind-jekyll-internal/issues"
+  }
 }
