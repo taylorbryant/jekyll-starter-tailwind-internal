@@ -1,5 +1,5 @@
 # Tailwind Jekyll Starter (Internal CSS)
-A starter kit for using [Tailwind](https://tailwindcss.com) (v0.7.4) with [Jekyll](https://jekyllrb.com/) that includes:
+A starter kit for using [Tailwind](https://tailwindcss.com) with [Jekyll](https://jekyllrb.com/) that includes:
 * A barebones Jekyll starter theme
 * A Gulpfile that does the following:
 
@@ -11,7 +11,7 @@ A starter kit for using [Tailwind](https://tailwindcss.com) (v0.7.4) with [Jekyl
     * Compiles Jekyll
     * Runs [Browsersync](https://www.browsersync.io/) for local development
 
-Don't want to use internal CSS? Check out the [_regular_ version](https://github.com/taylorbryant/tailwind-jekyll) of this starter kit.
+Don't want to use internal CSS? Check out the [_regular_ version](https://github.com/oddstronaut/tailwind-jekyll) of this starter kit.
 
 ## What is Tailwind?
 >"Tailwind is a utility-first CSS framework for rapidly building custom user interfaces."
@@ -37,16 +37,14 @@ Don't want to use internal CSS? Check out the [_regular_ version](https://github
 * `npm run build` to compile the site for production
 
 ## Deploy
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/taylorbryant/tailwind-jekyll-internal)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/oddstronaut/tailwind-jekyll-internal)
 
 Note: By default, Netlify uses `jekyll build` as the build command. Make sure to change this to `npm run build`.
 
 ## License
-[MIT](https://github.com/taylorbryant/tailwind-jekyll/blob/master/LICENSE.md)
+[MIT](https://github.com/oddstronaut/tailwind-jekyll/blob/master/LICENSE.md)
 
 ## How you can help
 Enjoying Tailwind Jekyll Internal and want to help? You can:
-* [Create an issue](https://github.com/taylorbryant/tailwind-jekyll-internal/issues/new) with some constructive criticism
-* [Submit a pull request](https://github.com/taylorbryant/tailwind-jekyll-internal/compare) with some improvements to the project
-* [Buy me a :coffee:](https://cash.me/$TaylorBryant)
-
+* [Create an issue](https://github.com/oddstronaut/tailwind-jekyll-internal/issues/new) with some constructive criticism
+* [Submit a pull request](https://github.com/oddstronaut/tailwind-jekyll-internal/compare) with some improvements to the project
