@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-jekyll-internal",
+  "name": "jekyll-starter-tailwind-internal",
   "version": "2.0.5",
   "description": "A starter kit for using Tailwind with Jekyll (internal CSS version)",
   "main": "gulpfile.babel.js",
@@ -23,11 +23,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oddstronaut/tailwind-jekyll-internal.git"
+    "url": "https://github.com/taylorbryant/jekyll-starter-tailwind-internal.git"
   },
   "author": "Taylor Bryant",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oddstronaut/tailwind-jekyll-internal/issues"
+    "url": "https://github.com/taylorbryant/jekyll-starter-tailwind-internal/issues"
   }
 }
