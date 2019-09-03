@@ -38,11 +38,15 @@ Don't want to use internal CSS? Check out the [_regular_ version](https://github
 
 ## Deploy
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/taylorbryant/jekyll-starter-tailwind-internal)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftaylorbryant%2Fjekyll-starter-tailwind-internal.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftaylorbryant%2Fjekyll-starter-tailwind-internal?ref=badge_shield)
 
 Note: By default, Netlify uses `jekyll build` as the build command. Make sure to change this to `npm run build`.
 
 ## License
 [MIT](https://github.com/taylorbryant/jekyll-starter-tailwind/blob/master/LICENSE.md)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftaylorbryant%2Fjekyll-starter-tailwind-internal.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftaylorbryant%2Fjekyll-starter-tailwind-internal?ref=badge_large)
 
 ## How you can help
 Enjoying Jekyll Starter Tailwind (Internal CSS) and want to help? You can:
